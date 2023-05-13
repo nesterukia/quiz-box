@@ -43,6 +43,7 @@ button{
 button:hover{
     background: #8F00FF;
     color:white;
+    transition: 0.4s;
 }
 
 p{
@@ -138,6 +139,53 @@ h3{
     font-weight: 400;
     font-size: 13px;
 }
+.dropdown{
+    position:relative
+}
+.dropdown:hover .dropdown__content{
+    left: 0;
+    opacity: 100%;
+    transition: opacity 0.4s;
+}
+.dropdown__content{
+    position:absolute;
+    background: #EDEDED;
+    color: #1E1F20;
+    width: 160px;
+    margin-left: -62px;
+    margin-top: 8px;
+    border-radius: 9px;
+    padding: 15px 19px;
+    left: -9999px;
+    opacity: 0;
+}
+.dropdown__content:before{
+    content: "";
+    display: block;
+    position: absolute;
+    border:10px solid transparent;
+    margin-top: -10px;
+    margin-left: 95px;
+    width: 0;
+    height: 0;
+    border-bottom-color: #EDEDED;
+    border-top-width: 0;
+}
+.dropdown__content:before{
+    content: "";
+    display: block;
+    height: 30px;
+    left: 0;
+    right: 0;
+    top: -29px;
+    position: absolute;
+}
+.dropdown__days{
+    font-weight: 700;
+}
+.dropdown__lunch{
+    font-weight: 600;
+}
 .hero__title{
     margin-bottom: 104px;
     font-weight: 700;
@@ -186,20 +234,18 @@ h3{
     border-radius: 5px;
 }
 .game__text{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
     padding: 12px 0 18px 0;
 }
 .game__name{
     font-weight: 700;
     font-size: 36px;
+    margin-bottom: 28.5px;
     color: #000000;
 }
 .game__desc{
     font-weight: 400;
     font-size: 16px;
+    margin-bottom: 34.5px;
     color: #303030;
 }
 
@@ -234,6 +280,7 @@ h3{
 .page__link:hover{
     background: #8F00FF;
     color:#fff;
+    transition: 0.4s;
 }
 
 .partners{
@@ -273,6 +320,29 @@ h3{
     flex-direction: row;
     width: 174px;
     justify-content: space-between;
+}
+.socials__icon{
+    display:block;
+}
+.fb-icon{
+    width: 36px; 
+    height: 36px;
+    background: url('pictures/css_sprites.png') -10px -10px;
+}
+.vk-icon{
+    width: 36px; 
+    height: 36px;
+    background: url('pictures/css_sprites.png') -66px -10px;
+}
+.tg-icon{
+    width: 36px; 
+    height: 36px;
+    background: url('pictures/css_sprites.png') -10px -66px;
+}
+.in-icon{
+    width: 36px; 
+    height: 36px;
+    background: url('pictures/css_sprites.png') -66px -66px;
 }
 .footer__contacts{
     display: flex;
